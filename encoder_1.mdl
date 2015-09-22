@@ -1,0 +1,3223 @@
+Model {
+  Name			  "encoder_1"
+  Version		  6.0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.924"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Jun 21 00:36:59 2009"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Paulo"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Oct 07 04:11:10 2009"
+  ModelVersionFormat	  "1.%<AutoIncrement:924>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "1"
+	  AbsTol		  "auto"
+	  FixedStep		  "1/8000"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "1/8000"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  Solver		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Abs
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      FrameConversion
+      OutFrame		      "Frame based"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      SignalConversion
+      OverrideOpt	      off
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      MATLABFcn
+      MATLABFcn		      "sin"
+      OutputDimensions	      "-1"
+      OutputSignalType	      "auto"
+      Output1D		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "encoder_1"
+    Location		    [137, 76, 851, 675]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      From
+      Name		      "From1"
+      Position		      [15, 251, 85, 269]
+      DialogController	      "Simulink.DDGSource"
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "residual"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From3"
+      Position		      [15, 386, 85, 404]
+      DialogController	      "Simulink.DDGSource"
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "LPCcoef"
+    }
+    Block {
+      BlockType		      From
+      Name		      "From4"
+      Position		      [15, 501, 85, 519]
+      DialogController	      "Simulink.DDGSource"
+      CloseFcn		      "tagdialog Close"
+      GotoTag		      "LPCcoef"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "G.729\nPreprocessing"
+      Ports		      [1, 2]
+      Position		      [110, 15, 225, 95]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"G.729\nPreprocessing"
+	Location		[187, 191, 820, 405]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s[n]"
+	  Position		  [15, 113, 45, 127]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "G.729\nBandwidth expansion"
+	  Ports			  [1, 1]
+	  Position		  [440, 115, 545, 155]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "G.729\nBandwidth expansion"
+	    Location		    [117, 319, 609, 433]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [15, 33, 45, 47]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Autocorrelation\nLPC"
+	      Ports		      [1, 2]
+	      Position		      [70, 18, 145, 62]
+	      SourceBlock	      "dsplp/Autocorrelation\nLPC"
+	      SourceType	      "Autocorrelation LPC"
+	      ShowPortLabels	      on
+	      lpcCoeffOutFcn	      "A"
+	      lpcOutP		      on
+	      inherit_prediction_order off
+	      order		      "10"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "LPC/RC to Autocorrelation"
+	      Ports		      [2, 1]
+	      Position		      [200, 18, 270, 62]
+	      SourceBlock	      "dsplp/LPC//RC to Autocorrelation"
+	      SourceType	      "LPC/RC to Autocorrelation"
+	      conversion	      "LPC to autocorrelation"
+	      perr_spec		      "Via input port"
+	      error		      "Replace it with 1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Windowing\nAC"
+	      Ports		      [1, 1]
+	      Position		      [330, 13, 410, 67]
+	      DialogController	      "dspDDGCreate"
+	      DialogControllerArgs    "DataTag0"
+	      SourceBlock	      "dspmtrx3/Matrix\nScaling"
+	      SourceType	      "Matrix Scaling"
+	      mode		      "Scale rows (D*A)"
+	      D_Source		      "Dialog parameter"
+	      D_VectFromMask	      "bandwidth_expansion"
+	      additionalParams	      off
+	      allowOverrides	      on
+	      firstCoeffMode	      "Same word length as input"
+	      firstCoeffWordLength    "16"
+	      firstCoeffFracLength    "15"
+	      outputMode	      "Same as product output"
+	      outputWordLength	      "16"
+	      outputFracLength	      "15"
+	      accumMode		      "Inherit via internal rule"
+	      accumWordLength	      "32"
+	      accumFracLength	      "30"
+	      prodOutputMode	      "Inherit via internal rule"
+	      prodOutputWordLength    "32"
+	      prodOutputFracLength    "30"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	      LockScale		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AC"
+	      Position		      [445, 33, 475, 47]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Autocorrelation\nLPC"
+	      SrcPort		      1
+	      DstBlock		      "LPC/RC to Autocorrelation"
+	      DstPort		      1
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "Windowing\nAC"
+	      SrcPort		      1
+	      DstBlock		      "AC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Autocorrelation\nLPC"
+	      SrcPort		      2
+	      DstBlock		      "LPC/RC to Autocorrelation"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "LPC/RC to Autocorrelation"
+	      SrcPort		      1
+	      DstBlock		      "Windowing\nAC"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Autocorrelation\nLPC"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "G.729\nHigh-pass INPUT filter"
+	  Ports			  [1, 1]
+	  Position		  [80, 98, 190, 142]
+	  DialogController	  "dspDDGCreate"
+	  DialogControllerArgs	  "DataTag1"
+	  SourceBlock		  "dsparch4/Digital Filter"
+	  SourceType		  "Digital Filter"
+	  TypePopup		  "IIR (poles & zeros)"
+	  IIRFiltStruct		  "Direct form II transposed"
+	  AllPoleFiltStruct	  "Direct form"
+	  FIRFiltStruct		  "Direct form"
+	  CoeffSource		  "Specify via dialog"
+	  NumCoeffs		  "[0.4636718 -0.92724705 0.4636718]"
+	  DenCoeffs		  "[1 1.19059465 0.9114024]"
+	  BiQuadCoeffs		  "[1 0.3 0.4 1 0.1 0.2]"
+	  LatticeCoeffs		  "[0.2 0.4]"
+	  denIgnore		  on
+	  FiltPerSampPopup	  "One filter per frame"
+	  IC			  "0"
+	  ICnum			  "0"
+	  ICden			  "0"
+	  additionalParams	  off
+	  allowOverrides	  on
+	  showCoeff		  off
+	  firstCoeffMode	  "Same word length as input"
+	  firstCoeffWordLength	  "16"
+	  firstCoeffFracLength	  "15"
+	  secondCoeffMode	  "Same as numerator"
+	  secondCoeffWordLength	  "16"
+	  secondCoeffFracLength	  "15"
+	  thirdCoeffMode	  "Same as input"
+	  thirdCoeffWordLength	  "16"
+	  thirdCoeffFracLength	  "15"
+	  showOut		  off
+	  outputMode		  "Same as accumulator"
+	  outputWordLength	  "16"
+	  outputFracLength	  "15"
+	  showAcc		  off
+	  accumMode		  "Same as product output"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  showMpy		  off
+	  prodOutputMode	  "Same as input"
+	  prodOutputWordLength	  "32"
+	  prodOutputFracLength	  "30"
+	  showMem		  off
+	  memoryMode		  "Same as accumulator"
+	  memoryWordLength	  "16"
+	  memoryFracLength	  "15"
+	  roundingMode		  "Floor"
+	  overflowMode		  off
+	  ScaleValues		  "1"
+	  scaleValueFracLength	  "14"
+	  tapSumMode		  "Same as input"
+	  tapSumWordLength	  "32"
+	  tapSumFracLength	  "30"
+	  stageIOMode		  "Same as input"
+	  stageIOWordLength	  "16"
+	  stageInFracLength	  "15"
+	  stageOutFracLength	  "15"
+	  LockScale		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "G.729\nHybrid Window"
+	  Ports			  [1, 1]
+	  Position		  [330, 116, 405, 154]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "G.729\nHybrid Window"
+	    Location		    [443, 448, 825, 707]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [25, 73, 55, 87]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer\n240-samples"
+	      Ports		      [1, 1]
+	      Position		      [80, 57, 155, 103]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "240"
+	      V			      "160"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Windowing"
+	      Ports		      [1, 1]
+	      Position		      [205, 53, 285, 107]
+	      DialogController	      "dspDDGCreate"
+	      DialogControllerArgs    "DataTag2"
+	      SourceBlock	      "dspmtrx3/Matrix\nScaling"
+	      SourceType	      "Matrix Scaling"
+	      mode		      "Scale rows (D*A)"
+	      D_Source		      "Dialog parameter"
+	      D_VectFromMask	      "hybrid_window"
+	      additionalParams	      off
+	      allowOverrides	      on
+	      firstCoeffMode	      "Same word length as input"
+	      firstCoeffWordLength    "16"
+	      firstCoeffFracLength    "15"
+	      outputMode	      "Same as product output"
+	      outputWordLength	      "16"
+	      outputFracLength	      "15"
+	      accumMode		      "Inherit via internal rule"
+	      accumWordLength	      "32"
+	      accumFracLength	      "30"
+	      prodOutputMode	      "Inherit via internal rule"
+	      prodOutputWordLength    "32"
+	      prodOutputFracLength    "30"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	      LockScale		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      Position		      [310, 73, 340, 87]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Buffer\n240-samples"
+	      SrcPort		      1
+	      DstBlock		      "Windowing"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Buffer\n240-samples"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Windowing"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "El buffer agrega\nun retardo\nde 40 mue"
+"stras"
+	      Position		      [189, 203]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Switch"
+	  Ports			  [2, 1]
+	  Position		  [225, 47, 255, 83]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  ShowPortLabels	  on
+	  sw			  "1"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "s[n] filtered "
+	  Position		  [585, 58, 615, 72]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "AC"
+	  Position		  [585, 128, 615, 142]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "G.729\nBandwidth expansion"
+	  SrcPort		  1
+	  DstBlock		  "AC"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "G.729\nHybrid Window"
+	  SrcPort		  1
+	  DstBlock		  "G.729\nBandwidth expansion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s[n]"
+	  SrcPort		  1
+	  Points		  [0, 0; 10, 0]
+	  Branch {
+	    DstBlock		    "G.729\nHigh-pass INPUT filter"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Switch"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  Points		  [0, 0; 45, 0]
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "G.729\nHybrid Window"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "s[n] filtered "
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "G.729\nHigh-pass INPUT filter"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -45]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto1"
+      Position		      [465, 26, 545, 44]
+      DialogController	      "Simulink.DDGSource"
+      GotoTag		      "residual"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto2"
+      Position		      [465, 66, 545, 84]
+      DialogController	      "Simulink.DDGSource"
+      GotoTag		      "LPCcoef"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "LP Analysis"
+      Ports		      [2, 2]
+      Position		      [285, 17, 400, 93]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"LP Analysis"
+	Location		[245, 84, 802, 317]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s[n] filtered"
+	  Position		  [15, 28, 45, 42]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "AC"
+	  Position		  [15, 73, 45, 87]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Downsample"
+	  Ports			  [1, 1]
+	  Position		  [270, 113, 305, 147]
+	  SourceBlock		  "dspsigops/Downsample"
+	  SourceType		  "Downsample"
+	  N			  "2"
+	  phase			  "0"
+	  ic			  "0"
+	  smode			  "Allow multirate"
+	  fmode			  "Maintain input frame size"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Levinson-Durbin"
+	  Ports			  [1, 1]
+	  Position		  [70, 58, 145, 102]
+	  DialogController	  "dspDDGCreate"
+	  DialogControllerArgs	  "DataTag3"
+	  SourceBlock		  "dspsolvers/Levinson-Durbin"
+	  SourceType		  "Levinson-Durbin"
+	  coeffOutFcn		  "A"
+	  outP			  off
+	  zeroInpHandling	  on
+	  additionalParams	  off
+	  allowOverrides	  off
+	  firstCoeffMode	  "Binary point scaling"
+	  firstCoeffWordLength	  "16"
+	  firstCoeffFracLength	  "15"
+	  secondCoeffMode	  "Binary point scaling"
+	  secondCoeffWordLength	  "16"
+	  secondCoeffFracLength	  "15"
+	  outputMode		  "Same as input"
+	  outputWordLength	  "16"
+	  outputFracLength	  "15"
+	  accumMode		  "Binary point scaling"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  prodOutputMode	  "Binary point scaling"
+	  prodOutputWordLength	  "32"
+	  prodOutputFracLength	  "30"
+	  roundingMode		  "Floor"
+	  overflowMode		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Time-varying filter"
+	  Ports			  [2, 1]
+	  Position		  [225, 30, 340, 85]
+	  DialogController	  "dspDDGCreate"
+	  DialogControllerArgs	  "DataTag4"
+	  SourceBlock		  "dsparch4/Digital Filter"
+	  SourceType		  "Digital Filter"
+	  TypePopup		  "FIR (all zeros)"
+	  IIRFiltStruct		  "Direct form II transposed"
+	  AllPoleFiltStruct	  "Direct form"
+	  FIRFiltStruct		  "Direct form"
+	  CoeffSource		  "Input port(s)"
+	  NumCoeffs		  "[0.4636718 -0.92724705 0.4636718]"
+	  DenCoeffs		  "[1 1.19059465 0.9114024]"
+	  BiQuadCoeffs		  "[1 0.3 0.4 1 0.1 0.2]"
+	  LatticeCoeffs		  "[0.2 0.4]"
+	  denIgnore		  on
+	  FiltPerSampPopup	  "One filter per frame"
+	  IC			  "0"
+	  ICnum			  "0"
+	  ICden			  "0"
+	  additionalParams	  off
+	  allowOverrides	  on
+	  showCoeff		  off
+	  firstCoeffMode	  "Same word length as input"
+	  firstCoeffWordLength	  "16"
+	  firstCoeffFracLength	  "15"
+	  secondCoeffMode	  "Same as numerator"
+	  secondCoeffWordLength	  "16"
+	  secondCoeffFracLength	  "15"
+	  thirdCoeffMode	  "Same as input"
+	  thirdCoeffWordLength	  "16"
+	  thirdCoeffFracLength	  "15"
+	  showOut		  off
+	  outputMode		  "Same as accumulator"
+	  outputWordLength	  "16"
+	  outputFracLength	  "15"
+	  showAcc		  off
+	  accumMode		  "Same as product output"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  showMpy		  off
+	  prodOutputMode	  "Same as input"
+	  prodOutputWordLength	  "32"
+	  prodOutputFracLength	  "30"
+	  showMem		  off
+	  memoryMode		  "Same as accumulator"
+	  memoryWordLength	  "16"
+	  memoryFracLength	  "15"
+	  roundingMode		  "Floor"
+	  overflowMode		  off
+	  ScaleValues		  "1"
+	  scaleValueFracLength	  "14"
+	  tapSumMode		  "Same as input"
+	  tapSumWordLength	  "32"
+	  tapSumFracLength	  "30"
+	  stageIOMode		  "Same as input"
+	  stageIOWordLength	  "16"
+	  stageInFracLength	  "15"
+	  stageOutFracLength	  "15"
+	  LockScale		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "residual"
+	  Position		  [385, 53, 415, 67]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "A"
+	  Position		  [385, 123, 415, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Levinson-Durbin"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [25, 0]
+	    DstBlock		    "Time-varying filter"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Downsample"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "s[n] filtered"
+	  SrcPort		  1
+	  Points		  [160, 0]
+	  DstBlock		  "Time-varying filter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Time-varying filter"
+	  SrcPort		  1
+	  DstBlock		  "residual"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "AC"
+	  SrcPort		  1
+	  DstBlock		  "Levinson-Durbin"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Downsample"
+	  SrcPort		  1
+	  DstBlock		  "A"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "LSF Vector\nQuantization"
+      Ports		      [1, 2]
+      Position		      [300, 460, 440, 560]
+      FontName		      "Arial"
+      FontSize		      12
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"LSF Vector\nQuantization"
+	Location		[134, 359, 945, 644]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "LPC"
+	  Position		  [25, 169, 55, 181]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "LPC to LSF \nconversion"
+	  Ports			  [1, 1]
+	  Position		  [195, 153, 265, 197]
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "dsplp/LPC to LSF//LSP\nConversion"
+	  SourceType		  "LPC to LSF/LSP Conversion"
+	  output		  "LSF in range (0 pi)"
+	  NSteps		  "64"
+	  NBisects		  "4"
+	  RootStatus		  off
+	  correction		  off
+	  lastLSP		  off
+	  error			  "Ignore"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LSF Split VQ"
+	  Ports			  []
+	  Position		  [22, 15, 62, 54]
+	  ForegroundColor	  "cyan"
+	  ShowName		  off
+	  List {
+	    ListType		    RTWdata
+	    document_text01	    "In this portion of the subsystems, the fo"
+"llowing operations occur:\n\n\n1. Linear prediction (LP) coefficients are co"
+"nverted to line spectral \n\n   frequencies (LSFs). After quantization and i"
+"nterpolation, the stability \n\n   of the LP synthesis filter can be guarant"
+"eed in the LSF domain without \n\n   additional computation. \n\n\n2. Weigh"
+"ting factors used in the LSF quantization are calculated using the \n\n   me"
+"thod proposed by Paliwal and Atal*. In this method, the weight \n\n   assign"
+"ed to a given LSF is proportional to the spectral sensitivity and \n\n   the"
+" value of the spectral envelope at the current LSF.\n\n*[ K.K. Paliwal and B"
+".S. Atal, \"Efficient vector quantization of LPC \n\n   parameters at 24 bit"
+"s/frame,\" J. Acoust. Soc. Am., vol. 87, p. S39, 1990]"
+	  }
+	  CopyFcn		  "docblock('breaklink',gcb);"
+	  DeleteFcn		  "docblock('close_document',gcb);"
+	  PreSaveFcn		  "docblock('save_document',gcb);"
+	  OpenFcn		  "docblock('edit_document',gcb);"
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  MaskType		  "DocBlock"
+	  MaskDescription	  "Use this block to save long descriptive tex"
+"t with the model.  Double-clicking the block will open an editor."
+	  MaskPromptString	  "RTW Embedded Coder Flag|Document Type"
+	  MaskStyleString	  "edit,popup(Text|RTF|HTML)"
+	  MaskTunableValueString  "off,off"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,off"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "ECoderFlag=&1;DocumentType=&2;"
+	  MaskDisplay		  "plot([.8 0 0 1 1 .8 .8 1],[1 1 0 0 .8 1 .8 "
+".8]);\ntext(.5,.5,'DOC','horizontalalignment','center');\n"
+	  MaskIconFrame		  off
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "|Text"
+	  MaskTabNameString	  ","
+	  System {
+	    Name		    "LSF Split VQ"
+	    Location		    [480, 85, 980, 386]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "EmptySubsystem"
+	      Ports		      []
+	      Position		      [115, 50, 145, 80]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"EmptySubsystem"
+		Location		[146, 180, 902, 673]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "LSF Split VQ."
+	  Ports			  [2, 2]
+	  Position		  [475, 140, 570, 215]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "LSF Split VQ."
+	    Location		    [60, 142, 875, 482]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "U1to10"
+	      Position		      [15, 108, 45, 122]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "W1to10"
+	      Position		      [15, 263, 45, 277]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Concatenation\nof LSF subvectors"
+	      Ports		      [2, 1]
+	      Position		      [675, 213, 735, 297]
+	      SourceBlock	      "simulink/Math\nOperations/Matrix\nConca"
+"tenation"
+	      SourceType	      "Matrix Concatenation"
+	      numInports	      "2"
+	      catMethod		      "Horizontal"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Concatenation of\nQuantized LSFs"
+	      Ports		      [2, 1]
+	      Position		      [595, 114, 650, 156]
+	      SourceBlock	      "simulink/Math\nOperations/Matrix\nConca"
+"tenation"
+	      SourceType	      "Matrix Concatenation"
+	      numInports	      "2"
+	      catMethod		      "Vertical"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From10"
+	      Position		      [585, 267, 660, 283]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "Idx_lsf5to10"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From3"
+	      Position		      [265, 207, 340, 223]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "Wgt5to10"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From7"
+	      Position		      [265, 117, 340, 133]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "Wgt1to4"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From9"
+	      Position		      [585, 227, 660, 243]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "Idx_lsf1to4"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto4"
+	      Position		      [150, 275, 210, 295]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      GotoTag		      "Wgt5to10"
+	      TagVisibility	      "local"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto7"
+	      Position		      [150, 240, 210, 260]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      GotoTag		      "Wgt1to4"
+	      TagVisibility	      "local"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto8"
+	      Position		      [480, 85, 545, 105]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      GotoTag		      "Idx_lsf1to4"
+	      TagVisibility	      "local"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto9"
+	      Position		      [480, 175, 550, 195]
+	      ShowName		      off
+	      DialogController	      "Simulink.DDGSource"
+	      GotoTag		      "Idx_lsf5to10"
+	      TagVisibility	      "local"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Multiport\nSelector1"
+	      Ports		      [1, 2]
+	      Position		      [70, 232, 120, 303]
+	      ShowName		      off
+	      SourceBlock	      "dspindex/Multiport\nSelector"
+	      SourceType	      "Multiport Selector"
+	      rowsOrCols	      "Rows"
+	      idxCellArray	      "{1:4,5:10}"
+	      idxErrMode	      "Clip Index"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Multiport\nSelector2"
+	      Ports		      [1, 2]
+	      Position		      [145, 77, 190, 153]
+	      ShowName		      off
+	      SourceBlock	      "dspindex/Multiport\nSelector"
+	      SourceType	      "Multiport Selector"
+	      rowsOrCols	      "Rows"
+	      idxCellArray	      "{1:4,5:10}"
+	      idxErrMode	      "Clip Index"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sort"
+	      Ports		      [1, 1]
+	      Position		      [675, 103, 735, 167]
+	      DialogController	      "dspDDGCreate"
+	      DialogControllerArgs    "DataTag5"
+	      SourceBlock	      "dspstat3/Sort"
+	      SourceType	      "Sort"
+	      otype		      "Value"
+	      dir		      "Ascending"
+	      sortAlg		      "Quick sort"
+	      additionalParams	      off
+	      allowOverrides	      on
+	      accumMode		      "Same as input"
+	      accumWordLength	      "32"
+	      accumFracLength	      "30"
+	      prodOutputMode	      "Same as input"
+	      prodOutputWordLength    "32"
+	      prodOutputFracLength    "30"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Split vector quantization of LSF"
+	      Ports		      []
+	      Position		      [17, 15, 57, 54]
+	      ForegroundColor	      "cyan"
+	      ShowName		      off
+	      List {
+		ListType		RTWdata
+		document_text01		"In this subsystem, the LPC parameter "
+"vectors (LSFs) are quantized using a \n\nsplit vector quantization technique"
+". This technique is a type of product-code \n\nvector quantization. In this "
+"method, a vector of ten LSFs (LSF1, LSF2, ..., LSF10) \n\nis divided into th"
+"ree subvectors. The first subvector contains the first \n\nthree LSFs (LSF1,"
+" LSF2, LSF3). The second subvector contains the next three \n\nLSFs (LSF4, L"
+"SF5, LSF6). The third subvector contains the remaining four \n\nLSFs (LSF7, "
+"LSF8, LSF9, LSF10). Each of these subvectors is quantized \n\nseparately usi"
+"ng 10 bits. \n\n\n\n\nThe three codebooks that correspond to the three subv"
+"ectors are generated \n\nusing VQDTool from a training set of 200,000 LSF ve"
+"ctors using the \n\nGeneralized Lloyd Algorithm (GLA). The weighted mean squ"
+"are error (WMSE) \n\ncriterion is used as the distortion measure.\n\n\n\nI"
+"n this subsystem, the best codebook entry for each subvector is selected \n"
+"\nbased on the minimum weighted Euclidean distance measure. To arrive at the "
+"\n\noptimal codewords, a sequential search is conducted in each of the three"
+" \n\ncodebooks. All three codewords are concatenated and sorted and thus \n"
+"\nordering property in the quantized LSFs is ensured and the stability of the"
+" \n\nLP filter is guaranteed.  "
+	      }
+	      CopyFcn		      "docblock('breaklink',gcb);"
+	      DeleteFcn		      "docblock('close_document',gcb);"
+	      PreSaveFcn	      "docblock('save_document',gcb);"
+	      OpenFcn		      "docblock('edit_document',gcb);"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskType		      "DocBlock"
+	      MaskDescription	      "Use this block to save long descriptive"
+" text with the model.  Double-clicking the block will open an editor."
+	      MaskPromptString	      "RTW Embedded Coder Flag|Document Type"
+	      MaskStyleString	      "edit,popup(Text|RTF|HTML)"
+	      MaskTunableValueString  "off,off"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,off"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "ECoderFlag=&1;DocumentType=&2;"
+	      MaskDisplay	      "plot([.8 0 0 1 1 .8 .8 1],[1 1 0 0 .8 1"
+" .8 .8]);\ntext(.5,.5,'DOC','horizontalalignment','center');\n"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "|Text"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Split vector quantization of LSF"
+		Location		[480, 85, 980, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "EmptySubsystem"
+		  Ports			  []
+		  Position		  [115, 50, 145, 80]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  System {
+		    Name		    "EmptySubsystem"
+		    Location		    [146, 180, 902, 673]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "VQ of LSF: 1st subvector"
+	      Ports		      [2, 2]
+	      Position		      [355, 82, 450, 138]
+	      SourceBlock	      "dspquant2/Vector Quantizer\nEncoder"
+	      SourceType	      "Vector Quantizer Encoder"
+	      CBsource		      "Specify via dialog"
+	      codebook		      "CB_LSF_1to4"
+	      distMeasure	      "Weighted squared error"
+	      wgtSrc		      "Input port"
+	      weights		      "[1 1 1]"
+	      tieBreakRule	      "Choose the lower index"
+	      outQU		      on
+	      outQError		      off
+	      additionalParams	      off
+	      idtype		      "int32"
+	      prodOutputMode	      "Same as input"
+	      prodOutputWordLength    "16"
+	      prodOutputFracLength    "15"
+	      accumMode		      "Same as product output"
+	      accumWordLength	      "16"
+	      accumFracLength	      "15"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "VQ of LSF: 2nd subvector"
+	      Ports		      [2, 2]
+	      Position		      [355, 172, 450, 228]
+	      SourceBlock	      "dspquant2/Vector Quantizer\nEncoder"
+	      SourceType	      "Vector Quantizer Encoder"
+	      CBsource		      "Specify via dialog"
+	      codebook		      "CB_LSF_5to10"
+	      distMeasure	      "Weighted squared error"
+	      wgtSrc		      "Input port"
+	      weights		      "[1 1 1]"
+	      tieBreakRule	      "Choose the lower index"
+	      outQU		      on
+	      outQError		      off
+	      additionalParams	      off
+	      idtype		      "int32"
+	      prodOutputMode	      "Same as input"
+	      prodOutputWordLength    "16"
+	      prodOutputFracLength    "15"
+	      accumMode		      "Same as product output"
+	      accumWordLength	      "16"
+	      accumFracLength	      "15"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "qLSF"
+	      Position		      [760, 128, 790, 142]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "IdxLSF"
+	      Position		      [770, 248, 800, 262]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "VQ of LSF: 1st subvector"
+	      SrcPort		      2
+	      DstBlock		      "Concatenation of\nQuantized LSFs"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "VQ of LSF: 1st subvector"
+	      SrcPort		      1
+	      DstBlock		      "Goto8"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Multiport\nSelector2"
+	      SrcPort		      2
+	      Points		      [50, 0; 0, 50]
+	      DstBlock		      "VQ of LSF: 2nd subvector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Multiport\nSelector1"
+	      SrcPort		      2
+	      DstBlock		      "Goto4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "VQ of LSF: 2nd subvector"
+	      SrcPort		      1
+	      DstBlock		      "Goto9"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "VQ of LSF: 2nd subvector"
+	      SrcPort		      2
+	      Points		      [105, 0; 0, -70]
+	      DstBlock		      "Concatenation of\nQuantized LSFs"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Concatenation of\nQuantized LSFs"
+	      SrcPort		      1
+	      DstBlock		      "Sort"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From3"
+	      SrcPort		      1
+	      DstBlock		      "VQ of LSF: 2nd subvector"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Multiport\nSelector1"
+	      SrcPort		      1
+	      DstBlock		      "Goto7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From7"
+	      SrcPort		      1
+	      DstBlock		      "VQ of LSF: 1st subvector"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "From9"
+	      SrcPort		      1
+	      DstBlock		      "Concatenation\nof LSF subvectors"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From10"
+	      SrcPort		      1
+	      DstBlock		      "Concatenation\nof LSF subvectors"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "W1to10"
+	      SrcPort		      1
+	      DstBlock		      "Multiport\nSelector1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "U1to10"
+	      SrcPort		      1
+	      DstBlock		      "Multiport\nSelector2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sort"
+	      SrcPort		      1
+	      DstBlock		      "qLSF"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Concatenation\nof LSF subvectors"
+	      SrcPort		      1
+	      DstBlock		      "IdxLSF"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Multiport\nSelector2"
+	      SrcPort		      1
+	      DstBlock		      "VQ of LSF: 1st subvector"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Split vector quantization of LSF"
+	      Position		      [355, 19]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Manual Switch"
+	  Ports			  [2, 1]
+	  Position		  [625, 77, 655, 113]
+	  SourceBlock		  "simulink/Signal\nRouting/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  ShowPortLabels	  on
+	  sw			  "1"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Paliwal Weight \nComputation"
+	  Ports			  [2, 1]
+	  Position		  [325, 159, 420, 226]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "Paliwal Weight \nComputation"
+	    Location		    [316, 387, 981, 587]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LSF"
+	      Position		      [25, 118, 55, 132]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "LPC"
+	      Position		      [25, 78, 55, 92]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Calculation of Perceptual \nWeighting F"
+"actors"
+	      Ports		      []
+	      Position		      [22, 15, 62, 54]
+	      ForegroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      List {
+		ListType		RTWdata
+		document_text01		"Let the unquantized LSF vector is def"
+"ined as LSF = [LSF1,LSF2, ...,LSF10].\n\n\nThe respective weighting vector i"
+"s W = [w1, w2, ....,w8, 0.8*w9, 0.4*w10].\n\n\nWithin this weighting vector,"
+" the ith weighting factor, wi, is found using \n\nthis equation [P(LSFi)]^1."
+"5 (1<=i<=10), where P(f) is the LPC power \n\nspectrum associated with the L"
+"SF vector as a function of frequency, f]."
+	      }
+	      CopyFcn		      "docblock('breaklink',gcb);"
+	      DeleteFcn		      "docblock('close_document',gcb);"
+	      PreSaveFcn	      "docblock('save_document',gcb);"
+	      OpenFcn		      "docblock('edit_document',gcb);"
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      MaskType		      "DocBlock"
+	      MaskDescription	      "Use this block to save long descriptive"
+" text with the model.  Double-clicking the block will open an editor."
+	      MaskPromptString	      "RTW Embedded Coder Flag|Document Type"
+	      MaskStyleString	      "edit,popup(Text|RTF|HTML)"
+	      MaskTunableValueString  "off,off"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,off"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "ECoderFlag=&1;DocumentType=&2;"
+	      MaskDisplay	      "plot([.8 0 0 1 1 .8 .8 1],[1 1 0 0 .8 1"
+" .8 .8]);\ntext(.5,.5,'DOC','horizontalalignment','center');\n"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "|Text"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Calculation of Perceptual \nWeighting"
+" Factors"
+		Location		[480, 85, 980, 386]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "EmptySubsystem"
+		  Ports			  []
+		  Position		  [115, 50, 145, 80]
+		  TreatAsAtomicUnit	  off
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  System {
+		    Name		    "EmptySubsystem"
+		    Location		    [146, 180, 902, 673]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [367, 140, 403, 160]
+	      Orientation	      "up"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Value		      "0.15"
+	      VectorParams1D	      off
+	      SampleTime	      "1/50"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DSP Gain2"
+	      Ports		      [1, 1]
+	      Position		      [485, 100, 515, 130]
+	      ShowName		      off
+	      SourceBlock	      "dspobslib/DSP Gain"
+	      SourceType	      "DSP Gain"
+	      ShowPortLabels	      "on"
+	      gainValue		      "[ones(1,8) 0.8 0.4]"
+	      additionalParams	      "off"
+	      allowOverrides	      "on"
+	      gainMode		      "Same as input"
+	      gainWordLength	      "16"
+	      gainFracLength	      "15"
+	      prodOutputMode	      "Same as input"
+	      prodOutputWordLength    "16"
+	      prodOutputFracLength    "15"
+	      roundingMode	      "Floor"
+	      overflowMode	      "off"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DSP Gain3"
+	      Ports		      [1, 1]
+	      Position		      [215, 70, 245, 100]
+	      ShowName		      off
+	      SourceBlock	      "dspobslib/DSP Gain"
+	      SourceType	      "DSP Gain"
+	      ShowPortLabels	      "on"
+	      gainValue		      "-1"
+	      additionalParams	      "off"
+	      allowOverrides	      "on"
+	      gainMode		      "Same as input"
+	      gainWordLength	      "16"
+	      gainFracLength	      "15"
+	      prodOutputMode	      "Same as input"
+	      prodOutputWordLength    "16"
+	      prodOutputFracLength    "15"
+	      roundingMode	      "Floor"
+	      overflowMode	      "off"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "LPCpowSpec"
+	      Ports		      [2, 1]
+	      Position		      [270, 67, 345, 143]
+	      TreatAsAtomicUnit	      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      System {
+		Name			"LPCpowSpec"
+		Location		[227, 300, 996, 481]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "PC"
+		  Position		  [160, 18, 190, 32]
+		  Port			  "1"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "LSF"
+		  Position		  [15, 133, 45, 147]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  LatchInput		  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Complex\nExponential"
+		  Ports			  [1, 1]
+		  Position		  [275, 112, 325, 148]
+		  ShowName		  off
+		  SourceBlock		  "dspmathops/Complex\nExponential"
+		  SourceType		  "Complex Exponential"
+		  ShowPortLabels	  "on"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [472, 70, 508, 85]
+		  Orientation		  "up"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  VectorParams1D	  off
+		  SampleTime		  "1/50"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [103, 75, 147, 95]
+		  Orientation		  "down"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Value			  "[1:10]'"
+		  VectorParams1D	  off
+		  SampleTime		  "1/50"
+		}
+		Block {
+		  BlockType		  Math
+		  Name			  "Math\nFunction"
+		  Ports			  [1, 1]
+		  Position		  [540, 20, 570, 50]
+		  ShowName		  off
+		  Operator		  "magnitude^2"
+		}
+		Block {
+		  BlockType		  Math
+		  Name			  "Math\nFunction2"
+		  Ports			  [1, 1]
+		  Position		  [630, 20, 660, 50]
+		  ShowName		  off
+		  Operator		  "reciprocal"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix Multiply"
+		  Ports			  [2, 1]
+		  Position		  [380, 16, 435, 54]
+		  ShowName		  off
+		  SourceBlock		  "dspmtrx3/Matrix Multiply"
+		  SourceType		  "Matrix Multiply"
+		  numInputPorts		  "2"
+		  OptimizationLevel	  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Matrix Multiply3"
+		  Ports			  [2, 1]
+		  Position		  [165, 111, 220, 149]
+		  ShowName		  off
+		  SourceBlock		  "dspmtrx3/Matrix Multiply"
+		  SourceType		  "Matrix Multiply"
+		  numInputPorts		  "2"
+		  OptimizationLevel	  "None"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape2"
+		  Ports			  [1, 1]
+		  Position		  [75, 128, 100, 152]
+		  ShowName		  off
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Row vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Reshape3"
+		  Ports			  [1, 1]
+		  Position		  [270, 13, 295, 37]
+		  ShowName		  off
+		  SourceBlock		  "simulink/Math\nOperations/Reshape"
+		  SourceType		  "Reshape"
+		  OutputDimensionality	  "Row vector"
+		  OutputDimensions	  "[1,1]"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [480, 25, 500, 45]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|-+"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out"
+		  Position		  [715, 28, 745, 42]
+		  BackgroundColor	  "green"
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "Math\nFunction2"
+		  SrcPort		  1
+		  DstBlock		  "Out"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Matrix Multiply"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "PC"
+		  SrcPort		  1
+		  DstBlock		  "Reshape3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Complex\nExponential"
+		  SrcPort		  1
+		  Points		  [0, -85]
+		  DstBlock		  "Matrix Multiply"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Math\nFunction"
+		  SrcPort		  1
+		  DstBlock		  "Math\nFunction2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Math\nFunction"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Reshape3"
+		  SrcPort		  1
+		  DstBlock		  "Matrix Multiply"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "LSF"
+		  SrcPort		  1
+		  DstBlock		  "Reshape2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Reshape2"
+		  SrcPort		  1
+		  DstBlock		  "Matrix Multiply3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  Points		  [0, 20]
+		  DstBlock		  "Matrix Multiply3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Matrix Multiply3"
+		  SrcPort		  1
+		  DstBlock		  "Complex\nExponential"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [2, 1]
+	      Position		      [410, 97, 440, 128]
+	      ShowName		      off
+	      Operator		      "pow"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Reshape"
+	      Ports		      [1, 1]
+	      Position		      [545, 103, 570, 127]
+	      ShowName		      off
+	      SourceBlock	      "simulink/Math\nOperations/Reshape"
+	      SourceType	      "Reshape"
+	      OutputDimensionality    "Column vector"
+	      OutputDimensions	      "[1,1]"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Submatrix"
+	      Ports		      [1, 1]
+	      Position		      [135, 65, 185, 105]
+	      ShowName		      off
+	      SourceBlock	      "dspmtrx3/Submatrix"
+	      SourceType	      "Submatrix"
+	      RowSpan		      "Range of rows"
+	      RowStartMode	      "Index"
+	      RowStartIndex	      "2"
+	      RowEndMode	      "Last"
+	      RowEndIndex	      "1"
+	      ColSpan		      "All columns"
+	      ColStartMode	      "First"
+	      ColStartIndex	      "1"
+	      ColEndMode	      "Last"
+	      ColEndIndex	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Weights"
+	      Position		      [610, 108, 640, 122]
+	      BackgroundColor	      "green"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "LPCpowSpec"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [0, -15]
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "DSP Gain2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DSP Gain2"
+	      SrcPort		      1
+	      DstBlock		      "Reshape"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LSF"
+	      SrcPort		      1
+	      DstBlock		      "LPCpowSpec"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Reshape"
+	      SrcPort		      1
+	      DstBlock		      "Weights"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Submatrix"
+	      SrcPort		      1
+	      DstBlock		      "DSP Gain3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "LPC"
+	      SrcPort		      1
+	      DstBlock		      "Submatrix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DSP Gain3"
+	      SrcPort		      1
+	      DstBlock		      "LPCpowSpec"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "Calculation of Perceptual Weighting Fac"
+"tors"
+	      Position		      [325, 19]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Reshape"
+	  Ports			  [1, 1]
+	  Position		  [675, 84, 725, 106]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Math\nOperations/Reshape"
+	  SourceType		  "Reshape"
+	  OutputDimensionality	  "1-D array"
+	  OutputDimensions	  "[10,1]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Reshape1"
+	  Ports			  [1, 1]
+	  Position		  [85, 163, 110, 187]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Math\nOperations/Reshape"
+	  SourceType		  "Reshape"
+	  OutputDimensionality	  "Column vector"
+	  OutputDimensions	  "[1,1]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Reshape2"
+	  Ports			  [1, 1]
+	  Position		  [550, 239, 600, 261]
+	  ShowName		  off
+	  SourceBlock		  "simulink/Math\nOperations/Reshape"
+	  SourceType		  "Reshape"
+	  OutputDimensionality	  "1-D array"
+	  OutputDimensions	  "[10,1]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Signal To\nWorkspace"
+	  Ports			  [1]
+	  Position		  [675, 241, 730, 259]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  SourceBlock		  "dspsnks4/Signal To\nWorkspace"
+	  SourceType		  "Signal To Workspace"
+	  ShowPortLabels	  on
+	  VariableName		  "Weights"
+	  MaxDataPoints		  "inf"
+	  Decimation		  "1"
+	  FrameMode		  "Concatenate frames (2-D array)"
+	  FixptAsFi		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "qLSF"
+	  Position		  [745, 88, 775, 102]
+	  BackgroundColor	  "green"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "IdxLSF"
+	  Position		  [745, 188, 775, 202]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "LPC"
+	  SrcPort		  1
+	  DstBlock		  "Reshape1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Paliwal Weight \nComputation"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "LSF Split VQ."
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Reshape2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Reshape1"
+	  SrcPort		  1
+	  Points		  [0, 0; 50, 0]
+	  Branch {
+	    DstBlock		    "LPC to LSF \nconversion"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "Paliwal Weight \nComputation"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "LPC to LSF \nconversion"
+	  SrcPort		  1
+	  Points		  [0, 0; 25, 0]
+	  Branch {
+	    DstBlock		    "Paliwal Weight \nComputation"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      Points		      [165, 0]
+	      DstBlock		      "LSF Split VQ."
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -50]
+	      DstBlock		      "Manual Switch"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "LSF Split VQ."
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -55]
+	  DstBlock		  "Manual Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Manual Switch"
+	  SrcPort		  1
+	  DstBlock		  "Reshape"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LSF Split VQ."
+	  SrcPort		  2
+	  DstBlock		  "IdxLSF"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Reshape"
+	  SrcPort		  1
+	  DstBlock		  "qLSF"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Reshape2"
+	  SrcPort		  1
+	  DstBlock		  "Signal To\nWorkspace"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Split Vector Quantization of LSF vector"
+	  Position		  [330, 19]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Pitch Detection Algorithm\n(PDA)"
+      Ports		      [1, 1]
+      Position		      [300, 228, 440, 292]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Pitch Detection Algorithm\n(PDA)"
+	Location		[283, 299, 665, 427]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "residual"
+	  Position		  [25, 43, 55, 57]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Pitch\nDetection"
+	  Position		  [205, 26, 285, 74]
+	  MATLABFcn		  "pitch_detection"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "STFT\nMagnitude"
+	  Ports			  [1, 1]
+	  Position		  [80, 26, 160, 74]
+	  TreatAsAtomicUnit	  off
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  System {
+	    Name		    "STFT\nMagnitude"
+	    Location		    [143, 462, 711, 667]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "residual"
+	      Position		      [30, 83, 60, 97]
+	      Port		      "1"
+	      IconDisplay	      "Port number"
+	      LatchInput	      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer\n160-samples"
+	      Ports		      [1, 1]
+	      Position		      [100, 65, 150, 115]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "160"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer\n240-samples"
+	      Ports		      [1, 1]
+	      Position		      [195, 65, 245, 115]
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "240"
+	      V			      "80"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Magnitude\nFFT"
+	      Ports		      [1, 1]
+	      Position		      [395, 70, 455, 110]
+	      SourceBlock	      "dspspect3/Magnitude\nFFT"
+	      SourceType	      "Magnitude FFT"
+	      ShowPortLabels	      on
+	      mag_or_magsq	      "Magnitude"
+	      fftLenInherit	      off
+	      fftsize		      "512"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Windowing"
+	      Ports		      [1, 1]
+	      Position		      [285, 63, 365, 117]
+	      DialogController	      "dspDDGCreate"
+	      DialogControllerArgs    "DataTag6"
+	      SourceBlock	      "dspmtrx3/Matrix\nScaling"
+	      SourceType	      "Matrix Scaling"
+	      mode		      "Scale rows (D*A)"
+	      D_Source		      "Dialog parameter"
+	      D_VectFromMask	      "hamming(240)"
+	      additionalParams	      off
+	      allowOverrides	      on
+	      firstCoeffMode	      "Same word length as input"
+	      firstCoeffWordLength    "16"
+	      firstCoeffFracLength    "15"
+	      outputMode	      "Same as product output"
+	      outputWordLength	      "16"
+	      outputFracLength	      "15"
+	      accumMode		      "Inherit via internal rule"
+	      accumWordLength	      "32"
+	      accumFracLength	      "30"
+	      prodOutputMode	      "Inherit via internal rule"
+	      prodOutputWordLength    "32"
+	      prodOutputFracLength    "30"
+	      roundingMode	      "Floor"
+	      overflowMode	      off
+	      LockScale		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "|R[w]|"
+	      Position		      [480, 83, 510, 97]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Buffer\n240-samples"
+	      SrcPort		      1
+	      DstBlock		      "Windowing"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Windowing"
+	      SrcPort		      1
+	      DstBlock		      "Magnitude\nFFT"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "residual"
+	      SrcPort		      1
+	      DstBlock		      "Buffer\n160-samples"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Magnitude\nFFT"
+	      SrcPort		      1
+	      DstBlock		      "|R[w]|"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer\n160-samples"
+	      SrcPort		      1
+	      DstBlock		      "Buffer\n240-samples"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Pitch\nPeriod"
+	  Position		  [310, 43, 340, 57]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "STFT\nMagnitude"
+	  SrcPort		  1
+	  DstBlock		  "Pitch\nDetection"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pitch\nDetection"
+	  SrcPort		  1
+	  DstBlock		  "Pitch\nPeriod"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "residual"
+	  SrcPort		  1
+	  DstBlock		  "STFT\nMagnitude"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signal From\nWorkspace"
+      Ports		      [0, 1]
+      Position		      [15, 38, 70, 72]
+      SourceBlock	      "dspsrcs4/Signal From\nWorkspace"
+      SourceType	      "Signal From Workspace"
+      ShowPortLabels	      on
+      X			      "speech"
+      Ts		      "1/8000"
+      nsamps		      "80"
+      OutputAfterFinalValue   "Setting to zero"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signal To\nWorkspace"
+      Ports		      [1]
+      Position		      [605, 476, 660, 494]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "dspsnks4/Signal To\nWorkspace"
+      SourceType	      "Signal To Workspace"
+      ShowPortLabels	      on
+      VariableName	      "LSFs"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      FrameMode		      "Concatenate frames (2-D array)"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signal To\nWorkspace1"
+      Ports		      [1]
+      Position		      [605, 341, 690, 359]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "dspsnks4/Signal To\nWorkspace"
+      SourceType	      "Signal To Workspace"
+      ShowPortLabels	      on
+      VariableName	      "SignalWeighted"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      FrameMode		      "Concatenate frames (2-D array)"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signal To\nWorkspace2"
+      Ports		      [1]
+      Position		      [605, 386, 690, 404]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "dspsnks4/Signal To\nWorkspace"
+      SourceType	      "Signal To Workspace"
+      ShowPortLabels	      on
+      VariableName	      "LPCWeighted"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      FrameMode		      "Concatenate frames (2-D array)"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Signal To\nWorkspace4"
+      Ports		      [1]
+      Position		      [605, 51, 690, 69]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "dspsnks4/Signal To\nWorkspace"
+      SourceType	      "Signal To Workspace"
+      ShowPortLabels	      on
+      VariableName	      "residual"
+      MaxDataPoints	      "inf"
+      Decimation	      "1"
+      FrameMode		      "Concatenate frames (2-D array)"
+      FixptAsFi		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      Position		      [605, 525, 625, 545]
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [605, 250, 690, 270]
+      ShowName		      off
+      VariableName	      "Pitch"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      Position		      [605, 156, 690, 174]
+      ShowName		      off
+      VariableName	      "UV"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Voiced-Unvoiced\nDecision"
+      Ports		      [1, 1]
+      Position		      [300, 134, 440, 196]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Voiced-Unvoiced\nDecision"
+	Location		[365, 341, 871, 668]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "s [n]"
+	  Position		  [15, 83, 45, 97]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Buffer\n224-samples"
+	  Ports			  [1, 1]
+	  Position		  [125, 65, 175, 115]
+	  SourceBlock		  "dspbuff3/Buffer"
+	  SourceType		  "Buffer"
+	  N			  "224"
+	  V			  "64"
+	  ic			  "0"
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Decision\nU-V"
+	  Position		  [265, 60, 325, 120]
+	  MATLABFcn		  "vu_decision"
+	  Output1D		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "U/V"
+	  Position		  [450, 83, 480, 97]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Decision\nU-V"
+	  SrcPort		  1
+	  DstBlock		  "U/V"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Buffer\n224-samples"
+	  SrcPort		  1
+	  DstBlock		  "Decision\nU-V"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s [n]"
+	  SrcPort		  1
+	  DstBlock		  "Buffer\n224-samples"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Weigthed\nLPC synthesis\nfilter"
+      Ports		      [2, 2]
+      Position		      [300, 327, 440, 418]
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Weigthed\nLPC synthesis\nfilter"
+	Location		[82, 380, 693, 681]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "residual"
+	  Position		  [15, 28, 45, 42]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "A"
+	  Position		  [15, 68, 45, 82]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Buffer"
+	  Ports			  [1, 1]
+	  Position		  [320, 30, 370, 80]
+	  SourceBlock		  "dspbuff3/Buffer"
+	  SourceType		  "Buffer"
+	  N			  "160"
+	  V			  "0"
+	  ic			  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Time-varying filter"
+	  Ports			  [2, 1]
+	  Position		  [175, 29, 280, 76]
+	  DialogController	  "dspDDGCreate"
+	  DialogControllerArgs	  "DataTag7"
+	  SourceBlock		  "dsparch4/Digital Filter"
+	  SourceType		  "Digital Filter"
+	  TypePopup		  "IIR (all poles)"
+	  IIRFiltStruct		  "Direct form II transposed"
+	  AllPoleFiltStruct	  "Direct form"
+	  FIRFiltStruct		  "Direct form"
+	  CoeffSource		  "Input port(s)"
+	  NumCoeffs		  "[0.4636718 -0.92724705 0.4636718]"
+	  DenCoeffs		  "[1 1.19059465 0.9114024]"
+	  BiQuadCoeffs		  "[1 0.3 0.4 1 0.1 0.2]"
+	  LatticeCoeffs		  "[0.2 0.4]"
+	  denIgnore		  on
+	  FiltPerSampPopup	  "One filter per frame"
+	  IC			  "0"
+	  ICnum			  "0"
+	  ICden			  "0"
+	  additionalParams	  off
+	  allowOverrides	  on
+	  showCoeff		  off
+	  firstCoeffMode	  "Same word length as input"
+	  firstCoeffWordLength	  "16"
+	  firstCoeffFracLength	  "15"
+	  secondCoeffMode	  "Same as numerator"
+	  secondCoeffWordLength	  "16"
+	  secondCoeffFracLength	  "15"
+	  thirdCoeffMode	  "Same as input"
+	  thirdCoeffWordLength	  "16"
+	  thirdCoeffFracLength	  "15"
+	  showOut		  off
+	  outputMode		  "Same as accumulator"
+	  outputWordLength	  "16"
+	  outputFracLength	  "15"
+	  showAcc		  off
+	  accumMode		  "Same as product output"
+	  accumWordLength	  "32"
+	  accumFracLength	  "30"
+	  showMpy		  off
+	  prodOutputMode	  "Same as input"
+	  prodOutputWordLength	  "32"
+	  prodOutputFracLength	  "30"
+	  showMem		  off
+	  memoryMode		  "Same as accumulator"
+	  memoryWordLength	  "16"
+	  memoryFracLength	  "15"
+	  roundingMode		  "Floor"
+	  overflowMode		  off
+	  ScaleValues		  "1"
+	  scaleValueFracLength	  "14"
+	  tapSumMode		  "Same as input"
+	  tapSumWordLength	  "32"
+	  tapSumFracLength	  "30"
+	  stageIOMode		  "Same as input"
+	  stageIOWordLength	  "16"
+	  stageInFracLength	  "15"
+	  stageOutFracLength	  "15"
+	  LockScale		  off
+	}
+	Block {
+	  BlockType		  MATLABFcn
+	  Name			  "Weighting\nFactor"
+	  Position		  [70, 57, 130, 93]
+	  MATLABFcn		  "error_weighting(u,0.8)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "s[n] weighted"
+	  Position		  [445, 48, 475, 62]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "A weighted"
+	  Position		  [445, 113, 475, 127]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Weighting\nFactor"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Time-varying filter"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 45]
+	    DstBlock		    "A weighted"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "residual"
+	  SrcPort		  1
+	  Points		  [110, 0]
+	  DstBlock		  "Time-varying filter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Time-varying filter"
+	  SrcPort		  1
+	  DstBlock		  "Buffer"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "A"
+	  SrcPort		  1
+	  DstBlock		  "Weighting\nFactor"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Buffer"
+	  SrcPort		  1
+	  DstBlock		  "s[n] weighted"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [47, 145]
+	}
+	Annotation {
+	  Position		  [428, 14]
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "LP Analysis"
+      SrcPort		      2
+      DstBlock		      "Goto2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Pitch Detection Algorithm\n(PDA)"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "G.729\nPreprocessing"
+      SrcPort		      2
+      DstBlock		      "LP Analysis"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "G.729\nPreprocessing"
+      SrcPort		      1
+      DstBlock		      "LP Analysis"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "LP Analysis"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	DstBlock		"Goto1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 25]
+	DstBlock		"Signal To\nWorkspace4"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Weigthed\nLPC synthesis\nfilter"
+      SrcPort		      1
+      DstBlock		      "Signal To\nWorkspace1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Weigthed\nLPC synthesis\nfilter"
+      SrcPort		      2
+      DstBlock		      "Signal To\nWorkspace2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Voiced-Unvoiced\nDecision"
+      SrcPort		      1
+      DstBlock		      "To Workspace3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Signal From\nWorkspace"
+      SrcPort		      1
+      DstBlock		      "G.729\nPreprocessing"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From1"
+      SrcPort		      1
+      Points		      [0, 0; 110, 0]
+      Branch {
+	DstBlock		"Pitch Detection Algorithm\n(PDA)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Weigthed\nLPC synthesis\nfilter"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -95]
+	DstBlock		"Voiced-Unvoiced\nDecision"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "From3"
+      SrcPort		      1
+      DstBlock		      "Weigthed\nLPC synthesis\nfilter"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "LSF Vector\nQuantization"
+      SrcPort		      1
+      DstBlock		      "Signal To\nWorkspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "From4"
+      SrcPort		      1
+      DstBlock		      "LSF Vector\nQuantization"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "LSF Vector\nQuantization"
+      SrcPort		      2
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  8
+  DataRecord {
+    Tag			    DataTag7
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $1I9VET86Q&:6QT97(    "
+  }
+  DataRecord {
+    Tag			    DataTag6
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $UA=')I>%-C86QI;F<    "
+  }
+  DataRecord {
+    Tag			    DataTag5
+    Data		    "  %)30     .    8     8    (     0         %    "
+"\"     $    !     0         .    ,     8    (    !          %    \"     $    "
+"$     0         0  0 4V]R= "
+  }
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $1I9VET86Q&:6QT97(    "
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    :     8    (     0         %    "
+"\"     $    !     0         .    .     8    (    !          %    \"     $    "
+"(     0         0    \"    $QE=FEN<V]N"
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $UA=')I>%-C86QI;F<    "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $1I9VET86Q&:6QT97(    "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    <     8    (     0         %    "
+"\"     $    !     0         .    0     8    (    !          %    \"     $    "
+"-     0         0    #0   $UA=')I>%-C86QI;F<    "
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.0 (R14) dated Apr 30 2004, 06:19:14
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"encoder_1"
+		created              		"03-Aug-2009 18:20:52"
+		isLibrary            		0
+		firstTarget          		2
+		sfVersion            		60014000.000006
+	}
+
+	target {
+		id               		2
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}
