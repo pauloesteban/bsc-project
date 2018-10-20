@@ -1,5 +1,4 @@
-# stc
-Sinusoidal Transform Coding for Speech
+# Sinusoidal Transform Coding for Speech
 
 Main MATLAB file: main_STC.m
 
