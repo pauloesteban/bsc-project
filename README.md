@@ -1,6 +1,11 @@
 # Sinusoidal Transform Coding for Speech
 
-*NOTE:* Originally written for MATLAB 7
+*NOTES:*
+- Originally developed under MATLAB 7. Some functions/blocks may no longer available on newer MATLAB editions.
 
-Main MATLAB file: main_STC.m
-Main SIMULINK file: encoder_1.mdl
+- Comments are written in Spanish
+
+*USE:*
+
+- Run main_STC.m
+- Run encoder_1.mdl
