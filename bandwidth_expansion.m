@@ -1,23 +1,18 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ESCUELA POLITECNICA DEL EJERCITO
-% DEPARTAMENTO DE ELECTRICA Y ELECTRONICA
-% PROYECTO DE GRADO
-% CODIFICADOR POR TRANSFORMADA SINUSOIDAL (STC)
-% Paulo Esteban Chiliguano Torres
-%
-% bandwidth_expansion.m
-% Expansion del ancho de banda de los coeficientes de autocorrelacion
+function w = bandwidth_expansion(k)
+% bandwidth_expansion generates a window for autocorrelation coefficients
+% Format of call: bandwidth_expansion(k)
+% Returns a window vector with length k
 % 
-% W_LAG = BANDWIDTH_EXPANSION() genera una ventana W_LAG para expandir
-% el ancho de banda en 60 Hz. de los coeficientes de autocorrelacion
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function w_lag = bandwidth_expansion();
-% Numero de coeficientes de autocorrelacion
-k = 10;
-% Frecuencia de expansion
+% Name: Paulo Esteban Chiliguano Torres
+% Date: 2018/10/26
+% Revision: 1.0
+
+% Expansion frequency
 fo = 60;
-% Ventana de expansion
-w_lag = [1.001 exp(-0.5*(2*pi*fo*(1:k)/8000).^2)];
-% El primer coeficiente de autocorrelacion R(0) se multiplicara por un
-% factor de 1.001
-% Los coeficientes R(1) a R(k) se multiplicaran por una funcion exponencial
+
+% White-noise factor
+whiteNoiseFactor = 1.001;
+
+% Expansion window
+w = [whiteNoiseFactor exp(-0.5*(2*pi*fo*(1:k-1)/8000).^2)];
+end
