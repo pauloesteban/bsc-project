@@ -1,11 +1,12 @@
 # Sinusoidal Transform Coding for Speech
 
-*NOTES:*
-- Originally developed under MATLAB 7. Some functions/blocks may no longer available on newer MATLAB editions.
+### NOTES:
+- Developed under MATLAB R2018b Academic
 
-- Comments are written in Spanish
+### USE:
 
-*USE:*
+- Open Bscproject.prj. (Highly recommended)
+- Open and run stc.slx
 
-- Run main_STC.m
-- Run encoder_1.mdl
+### Bibliography:
+- Lajos Hanzo, F. Clare A. Somerville, Jason Woodard, Voice and Audio Compression for Wireless Communications, *IEEE Series on Digital & Mobile Communication*, Second Edition, John Wiley & Sons, 2008

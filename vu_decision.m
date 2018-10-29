@@ -11,7 +11,7 @@
 % V = VU_DECISION(S) devuelve V=1 si el segmento de senal de voz S es
 % vocalico o V=0 si el segmento es no-vocalico
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function v = vu_decision(s);
+function v = vu_decision(s)
 % Coeficientes del filtro pasa-bajo h[n]
 % h = [0.125 0.375 0.375 0.125];
 % Coeficientes del filtro pasa-alto g[n]
