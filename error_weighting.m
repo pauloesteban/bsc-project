@@ -1,16 +1,17 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ESCUELA POLITECNICA DEL EJERCITO
-% DEPARTAMENTO DE ELECTRICA Y ELECTRONICA
-% PROYECTO DE GRADO
-% CODIFICADOR POR TRANSFORMADA SINUSOIDAL (STC)
-% Paulo Esteban Chiliguano Torres
+function a_w = error_weighting(a, gamma)
+% error_weighting computes error weighting filter coefficients
+% Format of call: error_weighting(a, gamma)
+% Returns a vector of filter coefficients considering weighting factors
 %
-% error_weighting.m
-% Ponderacion de los Coeficientes de Prediccion Lineal
-% A_W = ERROR_WEIGHTING(A,GAMMA) multiplica los coeficientes de prediccion
-% lineal A(0),A(1),...,A(10) por un factor de ponderacion exponencial GAMMA
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function a_w = error_weighting(a,gamma);
+% Name: Paulo Esteban Chiliguano Torres
+% Date: 2018/10/29
+% Revision: 1.0
+
+% weighting factors initialisation
+a_w = zeros(length(a), 1);
+
+% generate weighting factors
 for i = 1:length(a)
     a_w(i) = a(i).*gamma^(i-1);
+end
 end

@@ -1,10 +1,10 @@
 function pitchPeriod = pitch_detection(magR)
-% pitch_detection returns pitch from magnitud spectrum
+% pitch_detection performs frequency-domain pitch detection
 % Format of call: pitch_detection(magR)
 % Returns the pitch period in samples
 %
 % Name: Paulo Esteban Chiliguano Torres
-% Date: 2018/10/26
+% Date: 2018/10/29
 % Revision: 1.0
 
 % Load candidates

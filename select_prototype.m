@@ -1,3 +1,4 @@
+function seg_w = select_prototype(s_w,P)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESCUELA POLITECNICA DEL EJERCITO
 % DEPARTAMENTO DE ELECTRICA Y ELECTRONICA
@@ -10,7 +11,7 @@
 % SEG_W = SELECT_PROTOTYPE(S_W,P) selecciona un segmento prototipo SEG_W de
 % P muestras de un segmento S_W
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function seg_w = select_prototype(s_w,P)
+
 % Longitud del segmento de voz
 FL = length(s_w);
 % Limites de la porcion central del segmento
@@ -38,6 +39,7 @@ for j = a:-1:2
 end
 % Segmento prototipo final
 seg_w = s_w(a:b);
+end
 
 % % Grafica segmento prototipo
 % figure(1)
