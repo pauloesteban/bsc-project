@@ -65,7 +65,7 @@ for j = 2:length(Pitch)
     seg_w = select_prototype(s_w(:,j),Pitch(j));
 %     Analisis-Por-Sintesis del segmento prototipo
     [b,d,memVal,SNRAbS(j-1)] = AbyS(LPCWeighted(j-1,:),seg_w,memVal);
-    clear seg_w
+    clear seg_wj
 %     Vectores de coeficientes de longitud constante
     [b_cl d_cl] = interdecim(b,d);
     clear b d
